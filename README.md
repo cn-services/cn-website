@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CN Services website
+
+[![CircleCI](https://circleci.com/gh/cn-services/cn-website/tree/master.svg?style=svg)](https://circleci.com/gh/cn-services/cn-website/tree/master)
+[![](https://img.shields.io/github/license/cn-services/cn-website)](https://github.com/cn-services/cn-website)
+[![](https://img.shields.io/github/issues/cn-services/cn-website)](https://github.com/cn-services/cn-website)
+[![](https://img.shields.io/github/issues-closed/cn-services/cn-website)](https://github.com/cn-services/cn-website)
+[![](https://img.shields.io/github/languages/code-size/cn-services/cn-website)](https://github.com/cn-services/cn-website)
+[![](https://img.shields.io/github/repo-size/cn-services/cn-website)](https://github.com/cn-services/cn-website)
+
+## Requirements
+
+- Node.js and NPM (https://nodejs.org/)
+- Create React App (https://create-react-app.dev/)
+    
+        npm install -g create-react-app
 
 ## Available Scripts
 
