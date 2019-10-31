@@ -7,7 +7,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "76:0e:db:bc:2f:8e:41:f0:c9:34:7d:f3:6e:70:09:d2"
+            - "e5:a3:02:9c:14:5f:81:d3:c1:98:34:83:c5:26:d3:76"
       - checkout:
           path: ~/repository
       - restore_cache:
