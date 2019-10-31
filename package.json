@@ -14,7 +14,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "pre-deploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --repo git@github.com:cn-services/cn-services.github.io.git -b master --message \"Updating website on master branch\""
   },
   "eslintConfig": {
     "extends": "react-app"

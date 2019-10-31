@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16.3-browsers
+    working_directory: ~/repository
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "76:0e:db:bc:2f:8e:41:f0:c9:34:7d:f3:6e:70:09:d2"
+      - checkout:
+          path: ~/repository
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "package-lock.json" }}
+            - v1-npm-deps-
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: v1-npm-deps-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Build site
+          command: npm run pre-deploy
+      - run:
+          name: Setting Github User Email
+          command: git config user.email "noninojulian@gmail.com"
+      - run:
+          name: Setting Github User Name
+          command: git config user.name "Julian Nonino"
+      - run:
+          name: GitHub Pages Deploy
+          command: npm run deploy
